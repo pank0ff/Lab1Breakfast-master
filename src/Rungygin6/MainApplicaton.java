@@ -80,9 +80,9 @@ public class MainApplicaton
             Arrays.sort(breakfast, new Comparator() {
                 public int compare(Object o1, Object o2)
                 {
-                    if (o1 == null || ((Food)o1).name.length() > ((Food)o2).name.length())
+                    if (o1 == null || ((Food)o1).calculateCalories() < ((Food)o2).calculateCalories())
                         return 1;
-                    if (o2 == null || ((Food)o1).name.length() < ((Food)o2).name.length())
+                    if (o2 == null || ((Food)o1).calculateCalories() > ((Food)o2).calculateCalories())
                         return -1;
                     else return 0;
                 }
